@@ -2,7 +2,7 @@
 # cd /etc/ansible/	
 # nano ansible.cfg or nano ansible.cfg
 #	CTRL + W > enter remote_user
-# change remote_user = azdmin 
+# change remote_user = redadmin
 
 # config file for ansible -- https://ansible.com/
 # ===============================================
