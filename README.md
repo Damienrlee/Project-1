@@ -52,15 +52,23 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-3                | Server     | 10.0.0.7   | Linux            |
 | ELK-Machine          | Monitoring | 10.1.0.5   | Linux            |
 
-### Access Policies
+Access Policies
 
-The machines on the internal network are not exposed to the public Internet. 
+The machines on the internal network are not exposed to the public Internet.
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+-5061 Kibana port
+
+Machines within the network can only be accessed by Jump-Box-Provisioner.
+
+Which machine did you allow to access your ELK VM?
+
+Jump-Box-Provisioner
+
+What was its IP address?
+
+10.0.0.4 (Jump box Private IP)
 
 A summary of the access policies in place can be found in the table below.
 
