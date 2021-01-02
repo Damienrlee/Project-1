@@ -130,11 +130,15 @@ Copy the Playbook file to Ansible.
 Update the host file to include webserver and ELK.
 Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-For the one that I created it would be http://137.135.113.45:5601
+**Bonus**
 
+Specific commands the user will need to run to download the playbook, update the files, etc.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+-nano ansible.cfg
+-add the machine, its IP, and ansible_python_interpreter=/usr/bin/python3 to the hosts
+-Ctrl + x to exit file
+-in the folder that install-elk.yml is in, run: cp install-elk.yml /etc/ansible
+-nano install-elk.yml /etc/ansible
+-name: installing elk hosts: [the machine you want to install on]
+-Ctrl + x to exit file
+-ansible-playbook install-elk.yml
