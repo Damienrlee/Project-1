@@ -72,21 +72,33 @@ What was its IP address?
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name                 | Publicly Accessible | Allowed IP Address |
+|----------------------|---------------------|--------------------|
+| Jump-Box-Provisioner | Yes                 | 104.208.32.36      |
+| Web-1                | No                  | 10.0.0.4           |
+| Web-2                | No                  | 10.0.0.4           |
+| Web-3                | No                  | 10.0.0.4           |
+| ELK-Machine          | No                  | 10.0.0.4           |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it was sealed from vulnerabilities.
+
+What is the main advantage of automating configuration with Ansible?
+
+-Ansible is an open-source tool.
+-It is very simple to set up and use: You don't need any special coding skills to use Ansible's playbooks.
+-The user can configure the entire application environment no matter where it’s deployed. Users can also customize it based on their needs.
+-The user does not need to install any other software or firewall ports on the clients systems. The user also doesn't have to set up a separate management structure.
+-Because the user doesn't need to install any extra software, this allows more room for application resources on the server.
+-Ansible lets the user model even highly complex IT workflows.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+-Install docker.io
+-Install pip3
+-Install Docker python module
+-Increase virtual memory
+-Download and launch a docker
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -94,25 +106,35 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+| Name  | Allowed IP Address |
+|-------|--------------------|
+| Web-1 | 10.0.0.5           |
+| Web-2 | 10.0.0.6           |
+| Web-3 | 10.0.0.7           |
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+-filebeat
+-metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+-Filebeat collects data about the file system such as log events, and sends them to the monitoring cluster.
+
+-Metricbeat collects metrics and statistics and sends them to whatever output has been specified, such as Logstash or Elasticsearch.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+Copy the Playbook file to Ansible.
+Update the host file to include webserver and ELK.
+Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
+For the one that I created it would be http://137.135.113.45:5601
+
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
