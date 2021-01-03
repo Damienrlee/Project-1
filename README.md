@@ -74,7 +74,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-3                | No                  | 10.0.0.4           |
 | ELK-Machine          | No                  | 10.0.0.4           |
 
-### 3. Elk Configuration
+### 3. [Elk Configuration](https://github.com/Damienrlee/Project-1/blob/master/Ansible/elk_playbook.yml)
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it was sealed from vulnerabilities.
 
