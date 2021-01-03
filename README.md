@@ -96,7 +96,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](images/Docker_ps.png)
+![Docker_ps](images/Docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -124,7 +124,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 3. Update the host file to include webserver and ELK.
 4. Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
-**Bonus**
+### **Bonus**
 
 Specific commands the user will need to run to download the playbook, update the files, etc.
 
