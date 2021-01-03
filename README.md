@@ -5,8 +5,7 @@ The files in this repository were used to configure the network depicted below.
 ![Red-team Resource group digram](https://github.com/Damienrlee/Project-1/blob/master/images/Network_Diagram.png)
 ---
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
-
-[My ELK Playbook](https://github.com/Damienrlee/Project-1/blob/master/Ansible/elk_playbook.yml "ELK Playbook")    
+    
 ---
 This document contains the following details:
 1. Description of the Topology
@@ -16,7 +15,7 @@ This document contains the following details:
   b. Machines Being Monitored
 4. How to Use the Ansible Build
 ---
-### Description of the Topology
+### 1. Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
@@ -24,7 +23,7 @@ Load balancing ensures that the application will be highly protected, in additio
 
 Aspect of security that load balancers protect:
    
-   Azure Load Balancer operates at layer four of the (OSI) model and protects servers from becoming overloaded and possibly crashing. If one server goes down, the load balancer redirects traffic to the remaining servers online. When a new server is added to the server group, the load balancer automatically starts to send requests to it. In other words, load balancing helps improve availability and prevent downtime.
+  The Azure Load Balancer operates at layer four of the (OSI) model and protects servers from becoming overloaded and possibly crashing. If one server goes down, the load balancer automatically redirects traffic to the remaining servers online. When a new server is added to the server group, the load balancer automatically starts to send requests to it. In other words, load balancing helps improve availability and prevent downtime.
    
 The advantages of a jump box:
    
@@ -41,8 +40,7 @@ What does Metricbeat record?
   Metricbeat is a lightweight shipper that records and periodically collects metrics from the operating system and from services running on the server and takes the metrics and statistics that it collects and ships them to the output that users specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
-
+---
 | Name                 | Function   | IP Address | Operating System |
 |----------------------|------------|------------|------------------|
 | Jump-Box-Provisioner | Gateway    | 10.0.0.4   | Linux            |
@@ -51,14 +49,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-3                | Server     | 10.0.0.7   | Linux            |
 | ELK-Machine          | Monitoring | 10.1.0.5   | Linux            |
 ---
-Access Policies
+### 2. Access Policies
 
 The machines on the internal network are not exposed to the public Internet.
-
 Only the Jump box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-
 -5061 Kibana port
-
 Machines within the network can only be accessed by Jump-Box-Provisioner.
 
 Which machine did you allow to access your ELK VM?
@@ -66,8 +61,8 @@ Which machine did you allow to access your ELK VM?
 Jump-Box-Provisioner
 
 What was its IP address?
-
-10.0.0.4 (Jump box Private IP)
+104.208.32.36 (Jump box private IP)
+10.0.0.4 (Jump box Private IP) 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -79,7 +74,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-3                | No                  | 10.0.0.4           |
 | ELK-Machine          | No                  | 10.0.0.4           |
 
-### Elk Configuration
+### 3. Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it was sealed from vulnerabilities.
 
@@ -111,9 +106,9 @@ This ELK server is configured to monitor the following machines:
 | Web-2 | 10.0.0.6           |
 | Web-3 | 10.0.0.7           |
 
-We have installed the following Beats on these machines:
--filebeat
--metricbeat
+     We have installed the following Beats on these machines:
+       -filebeat
+       -metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
@@ -121,13 +116,13 @@ These Beats allow us to collect the following information from each machine:
 
 -Metricbeat collects metrics and statistics and sends them to whatever output has been specified, such as Logstash or Elasticsearch.
 
-### Using the Playbook
+### 4. Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:
-Copy the Playbook file to Ansible.
-Update the host file to include webserver and ELK.
-Run the playbook, and navigate to Kibana to check that the installation worked as expected.
+1. SSH into the control node and follow the steps below:
+2. Copy the Playbook file to Ansible.
+3. Update the host file to include webserver and ELK.
+4. Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
 **Bonus**
 
@@ -135,9 +130,9 @@ Specific commands the user will need to run to download the playbook, update the
 
 -nano ansible.cfg
 -add the machine, its IP, and ansible_python_interpreter=/usr/bin/python3 to the hosts
--Ctrl + x to exit file
+-Ctrl + x to exit file (y to save changes)
 -in the folder that install-elk.yml is in, run: cp install-elk.yml /etc/ansible
 -nano install-elk.yml /etc/ansible
 -name: installing elk hosts: [the machine you want to install on]
--Ctrl + x to exit file
+-Ctrl + x to exit file (y to save changes)
 -ansible-playbook install-elk.yml
