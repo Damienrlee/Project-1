@@ -2,21 +2,20 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](images/Network_Diagram.png)
-
+[](images/Network_Diagram.png)
+---
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-[My ELK Playbook](https://github.com/Damienrlee/Project-1/blob/master/Ansible/elk_playbook.yml "ELK Playbook")    
-
+(https://github.com/Damienrlee/Project-1/blob/master/Ansible/elk_playbook.yml "ELK Playbook")    
+---
 This document contains the following details:
-- Description of the Topology
-- Access Policies
-- ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
-- How to Use the Ansible Build
-
-
+1. Description of the Topology
+2. Access Policies
+3. ELK Configuration
+  a. Beats in Use
+  b. Machines Being Monitored
+4. How to Use the Ansible Build
+---
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
@@ -51,7 +50,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-2                | Server     | 10.0.0.6   | Linux            |
 | Web-3                | Server     | 10.0.0.7   | Linux            |
 | ELK-Machine          | Monitoring | 10.1.0.5   | Linux            |
-
+---
 Access Policies
 
 The machines on the internal network are not exposed to the public Internet.
