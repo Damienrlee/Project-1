@@ -49,7 +49,7 @@ The configuration details of each machine may be found below.
 | Web-3                | Server     | 10.0.0.7   | Linux            |
 | ELK-Machine          | Monitoring | 10.1.0.5   | Linux            |
 ---
-### 2. Access Policies
+### 2. [Access Policies](https://github.com/Damienrlee/Project-1/blob/master/images/Security_Rule.png)
 
 The machines on the internal network are not exposed to the public Internet.
 Only the Jump box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
