@@ -1,4 +1,7 @@
-## Automated ELK Stack Deployment
+## Cloud Network 
+This is a collection of information on the network that I built during my time in my Cybersecurity class.
+Most of the scripts found in the folders were used to configure the different servers and load Docker containers on to them.
+The final set was to establish; a network containing 4 servers, one with public access and 3 with limited access from only the pubilc gateway server. A peering network was also setup in a different Azure zone.
 
 The files in this repository were used to configure the network depicted below.
 
