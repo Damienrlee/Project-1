@@ -131,11 +131,11 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 Specific commands the user will need to run to download the playbook, update the files, etc.
 
--nano ansible.cfg
--add the machine, its IP, and ansible_python_interpreter=/usr/bin/python3 to the hosts
--Ctrl + x to exit file (y to save changes)
--in the folder that install-elk.yml is in, run: cp install-elk.yml /etc/ansible
--nano install-elk.yml /etc/ansible
--name: installing elk hosts: [the machine you want to install on]
--Ctrl + x to exit file (y to save changes)
--ansible-playbook install-elk.yml
+1. nano ansible.cfg
+2. add the machine, its IP, and ansible_python_interpreter=/usr/bin/python3 to the hosts
+3. Ctrl + x to exit file (y to save changes)
+4. In the folder that install-elk.yml is in, run: cp install-elk.yml /etc/ansible
+5. nano install-elk.yml /etc/ansible
+6. name: installing elk hosts: [the machine you want to install on]
+7. Ctrl + x to exit file (y to save changes)
+8. ansible-playbook install-elk.yml
